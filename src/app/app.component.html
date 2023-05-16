@@ -1,0 +1,41 @@
+<h1>{{titulo}}</h1>
+
+<mat-card>
+   <mat-card-content>
+    <h2>{{subtitulo1}}</h2>
+
+    <mat-form-field>
+      <mat-label>Título</mat-label>
+      <input matInput [(ngModel)]="filme.titulo" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Gênero</mat-label>
+      <input matInput [(ngModel)]="filme.genero" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Diretor</mat-label>
+      <input matInput [(ngModel)]="filme.diretor" />
+    </mat-form-field>
+    <br />
+
+    <button mat-raised-button color="warn" (click)="adicionar()">
+      Adicionar Filme
+    </button>
+
+    <br />
+
+    <h2>{{subtitulo2}}</h2>
+
+    <p *ngIf="!filmes.length">Nenhum filme cadastrado</p>
+
+    <mat-list *ngIf="filmes.length">
+      <mat-list-item *ngFor="let filme of filmes">
+        {{filme.titulo}} - {{filme.genero}} - {{filme.diretor}}
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

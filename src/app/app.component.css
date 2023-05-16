@@ -1,0 +1,18 @@
+mat-card {
+  text-align: center;
+}
+mat-form-field {
+  min-width: 150px;
+  max-width: 500px;
+  width: 50%;
+}
+
+mat-form-field {
+  width: 50%;
+}
+mat-card-title {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
